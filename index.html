@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>adwitads</title>
+  <!-- dataTable css cdn jquery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap cdn 4.6 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <!-- navbar section starts -->
+  <nav class="navbar navbar-light bg-light navBar d-flex w-100 justify-content-between py-3">
+    <div class="container-fluid logoBlock w-50 ps
+    -5">
+      <a class="navbar-brand">
+        <img
+          src="https://static.wixstatic.com/media/eaace3_3f63d0cb87bc4b2ebdc1159cec3486c6~mv2.png/v1/fill/w_110,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Adwit%20Logo%20Final-01.png"
+          alt="Logo" 
+          class="ps-0"/>
+      </a>
+    </div>
+    <div class="authBlock d-flex w-50 justify-content-end pe-5">
+        <div class="me-md-3">Dashboard</div>
+        <div class="me-md-3">Workstation</div>
+        <div class="me-md-3">Reports</div>
+        <div class="me-md-3"><i class="fa-solid fa-envelope"></i></div>
+        <div class="me-md-3"><i class="fa-solid fa-circle-question"></i></div>
+        <div class="me-md-3"><i class="fa-solid fa-circle-user"></i></div>
+      </div>
+  </nav>
+  <!-- navbar section ends -->
+  <!-- dropdown starts -->
+  <div class="col-sm-4 col-xs-6">
+    <div class="dropbox dropdown">
+    <select name="My Queue" id="select">
+      <option value="option1">My Queue</option>
+    </select>
+  </div>
+  </div>
+  <!-- dropdown ends -->
+  <!-- tabs section starts -->
+  <ul class="nav nav-pills tabs_navigation">
+    <li class="nav-item exclude">
+      <a class="nav-link active" aria-current="page" href="#">All(6)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Revisions(2)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">New Ads(2)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">QA(3)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Design Check(1)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Proof Sent(1)</a>
+    </li>
+    <!-- search box -->
+    <form class="d-flex search_box">
+      <input class="form-control me-2" type="search" aria-label="Search" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </form>
+    <!-- search box ends -->
+  </ul>
+  <!-- tabs section ends -->
+
+  <!-- table section starts -->
+  <table id="example" class="table data_Table" style="width: 90%">
+    <thead>
+      <tr>
+        <th>Order Date</th>
+        <th>Order Type</th>
+        <th>AdwitAds ID</th>
+        <th>Unique Job Number</th>
+        <th>Advertiser Name</th>
+        <th>Ad Rep Name</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>22nd Feb 2022</td>
+        <td>Print</td>
+        <td>2222 2222</td>
+        <td>Koch and Sons</td>
+        <td>Janice Monahan</td>
+        <td>Janice Monahan</td>
+        <td>In Production</td>
+        <td>1</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger _btn">Take Over</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>23nd Feb 2022</td>
+        <td>Online</td>
+        <td>3333 3333</td>
+        <td>Steuber LLC</td>
+        <td>Rollin Fadel</td>
+        <td>Rollin Fadel</td>
+        <td>Order Accepted</td>
+        <td>4</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-primary _btn" data-bs-toggle="modal" data-bs-target="#newAds">Start
+              Design</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>24nd Feb 2022</td>
+        <td>Page</td>
+        <td>4444 4444</td>
+        <td>Steuber LLC</td>
+        <td>Konopelski
+          Group
+        </td>
+        <td>Lera Stroman</td>
+        <td>Revsion Submitted</td>
+        <td>5</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-primary _btn" data-bs-toggle="modal" data-bs-target="#revision">Start
+              Design</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>25nd Feb 2022</td>
+        <td>Page</td>
+        <td>5555 5555</td>
+        <td>Harber Inc</td>
+        <td>Adan Schiller
+        </td>
+        <td>Adan Schiller</td>
+        <td>Proof Sent</td>
+        <td>6</td>
+        <td>
+          <div class="btn-group icon_container" role="group" aria-label="Basic mixed styles example">
+            <button data-bs-toggle="modal" data-bs-target="#viewOrder"><i class="fa-solid fa-eye"></i></button>
+            <button data-bs-toggle="modal" data-bs-target="#viewProof"><i class="fa-solid fa-file"></i></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>26nd Feb 2022</td>
+        <td>Online</td>
+        <td>6666 6666</td>
+        <td>Apple Inc</td>
+        <td>Joe Root
+        </td>
+        <td>Joe Root</td>
+        <td>Design Check</td>
+        <td>3</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <span><i class="fa-solid fa-eye"></i></span>
+            <span><i class="fa-solid fa-file"></i></span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>26nd Feb 2022</td>
+        <td>Online</td>
+        <td>6666 6666</td>
+        <td>Apple Inc</td>
+        <td>Joe Root
+        </td>
+        <td>Joe Root</td>
+        <td>In QA</td>
+        <td>2</td>
+        <td>
+          <span><i class="fa-solid fa-eye"></i></span>
+          <span><i class="fa-solid fa-file"></i></span>
+          </div>
+        </td>
+      </tr>
+      </tfoot>
+  </table>
+  <!-- table section ends  -->
+  <!-- pagination section starts -->
+  <div aria-label="Page navigation example" class="pagenation">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- pagination section ends -->
+  <!-- footer section starts -->
+  <div class="footer">
+    <span>FAQ's</span>
+    <span>Contact Us</span>
+  </div>
+  <!-- footer section ends -->
+  <!-- modal Revision starts -->
+  <div class="container mt-5">
+    <div class="modal" id="revision">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Start Design - Revision</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"><i
+                class="fa-solid fa-circle-xmark"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 revision">
+              <label class="form-label required">Notes & Instructions</label>
+              <textarea class="form-control"></textarea>
+            </div>
+            <div class="mb-3 revision_container2">
+              <label class="form-label required">Download / View Files</label>
+              <div class="subContainer_1">
+                <div>Marked Up PDF</div>
+                <div>Assets</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label required">Download / View Previous Files</label>
+              <div class="subcontainer_2a">
+                <div>Version 2</div>
+                <div>Marked Up PDF</div>
+                <div>Assets</div>
+              </div>
+              <div class="subcontainer_2b">
+                <div>Version 1</div>
+                <div>Marked Up PDF</div>
+                <div>Assets</div>
+                <div>Proof</div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Download InDesign and Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal Revision ends -->
+
+
+  <!-- modal NewAds starts -->
+  <div class="container mt-5">
+    <div class="modal" id="newAds">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Start Design - New Ad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"><i
+                class="fa-solid fa-circle-xmark"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 newAds">
+              <div>
+                <h3>Order Information</h3>
+              </div>
+              <div class="sub1">
+                <div>Publication Name:</div>
+                <div>Category:</div>
+              </div>
+              <div class="sub2">
+                <div>Advertiser Name:</div>
+                <div>CSR Instruction:</div>
+              </div>
+              <div class="sub3">
+                <div>Type of Ad: Print/Web</div>
+                <div>Rush/Standard:</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Download InDesign and Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal NewAds ends -->
+
+  <!-- modal viewOrder starts -->
+  <div class="container mt-5">
+    <div class="modal" id="viewOrder">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">View Order - {AdwitsAds ID} - {Unique Job ID}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"><i
+                class="fa-solid fa-circle-xmark"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 ViewOrder">
+              <div class="container_section1">
+                <div class="card1">
+                  <div class="heading">Order Details</div>
+                  <div class="card_body">
+                    <div>Order Date:</div>
+                    <div>Publish Date:</div>
+                    <div>Type of Ad: Print/Web</div>
+                    <div>Color of Ad:</div>
+                    <div>Size of Ad:</div>
+                  </div>
+                </div>
+                <div class="card2">
+                  <div class="heading">Advertiser Details</div>
+                  <div class="card_body">
+                    <div>Advertiser Name:</div>
+                    <div>Contact Person:</div>
+                    <div>Email:</div>
+                    <div>Phone:</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container_section2">
+                <div class="card3">
+                  <div class="heading">Time Log</div>
+                  <div class="card_body">
+                    <div>Order Submitted:</div>
+                    <div>File Submitted:</div>
+                    <div>Proof (v1) Sent:</div>
+                    <div>Proof (v1a) Sent:</div>
+                    <div>Proof (v1b) Sent:</div>
+                  </div>
+                </div>
+                <div class="card4">
+                  <div class="_heading_">Files</div>
+                  <div class="_card_body_">
+                    <div class="proof1">
+                      <div>
+                        <h6>Proof 1 : v1</h6>
+                      </div>
+                      <div>Files Submitted</div>
+                      <div>Ad Proof:</div>
+                    </div>
+                    <div class="proof2">
+                      <div>
+                        <h6>Proof 2 : v1a</h6>
+                      </div>
+                      <div>Files Submitted</div>
+                      <div>Ad Proof:</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal viewOrder ends -->
+
+
+    <!-- modal viewProof starts -->
+    <div class="container mt-5">
+      <div class="modal" id="viewProof">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">View Order - {AdwitsAds ID} - {Unique Job ID}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"><i
+                  class="fa-solid fa-circle-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3 ViewOProof">
+                <div>
+                  <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=612x612&w=0&h=jPhUdbj_7nWHUp0dsKRf4DMGaHiC16kg_FSjRRGoZEI=" alt="img">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer viewProof_btn">
+            <button type="submit" class="btn">Download PDF</button>
+            <button type="submit" class="btn">Print</button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal viewProof ends -->
+
+      <!-- bootstrap scripts bundle-->
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+      <!-- custom JSscript -->
+      <script src="./index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

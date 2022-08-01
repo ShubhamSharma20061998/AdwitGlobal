@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+body {
+  height: 100vh;
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --border-color: #dee2e6;
+}
+.authBlock {
+  font-size: 1.1rem;
+}
+.navBar {
+  height: 5rem;
+  border-bottom: 3px solid;
+}
+.tabs_navigation {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.tabs_navigation li a {
+  color: black;
+  font-weight: 600;
+}
+.tabs_navigation li {
+  width: 10rem;
+  text-align: center;
+  border-left: 1px solid var(--border-color);
+}
+.exclude {
+  border-left: none !important;
+}
+.search_box {
+  position: relative;
+  margin-left: 5rem;
+}
+.search_box i {
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+  color: var(--border-color);
+}
+.search_box input {
+  border: 1px solid var(--border-color);
+  border-radius: 1.2rem;
+  padding-left: 2.1rem;
+}
+.select_dropdown {
+  height: 10rem;
+}
+.dropbox {
+  margin: 2rem 0rem;
+  display: inline-block;
+  padding-left: 5rem;
+}
+.dropbox select {
+  width: 10rem;
+  height: 2.2rem;
+  border: 1px solid;
+  border-radius: 0.3rem;
+}
+.data_Table {
+  margin: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+td {
+  border: 1px solid var(--border-color);
+}
+th {
+  background-color: var(--border-color) !important;
+  font-weight: 500;
+  text-align: center !important;
+}
+thead {
+  border: 1px solid var(--border-color);
+}
+._btn {
+  height: 2rem;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+td span:first-child {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+.pagenation {
+  width: 90%;
+  float: right;
+  margin-right: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+}
+#example_wrapper {
+  overflow: hidden;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  border: 2px solid;
+  height: 6rem;
+  align-items: center;
+  padding-right: 5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+}
+.footer span:nth-child(2) {
+  margin-left: 3rem;
+}
+.modal-header {
+  background-color: black;
+  color: white;
+  border-bottom: 3px solid lime;
+}
+.modal-header i {
+  color: white;
+  font-size: 1.5rem;
+}
+.revision textarea {
+  border: 2px dotted var(--border-color);
+}
+.subContainer_1 {
+  display: flex;
+}
+.subContainer_1 div:first-child {
+  border: 1px solid var(--border-color);
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+.subContainer_1 div:nth-child(2) {
+  border: 1px solid var(--border-color);
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.subcontainer_2a,
+.subcontainer_2b {
+  display: flex;
+}
+.subcontainer_2a div:first-child,
+.subcontainer_2b div:first-child {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+.subcontainer_2a div:nth-child(2),
+.subcontainer_2b div:nth-child(2) {
+  border: 1px solid var(--border-color);
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+}
+.subcontainer_2a div:nth-child(3),
+.subcontainer_2b div:nth-child(3) {
+  border: 1px solid var(--border-color);
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+}
+.subcontainer_2b div:nth-child(4) {
+  border: 1px solid var(--border-color);
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.modal-content {
+  width: 33rem;
+}
+.modal-footer {
+  justify-content: center;
+}
+.modal-footer .btn-primary {
+  color: #fff;
+  background-color: limegreen;
+  border-color: limegreen;
+}
+.modal-footer .btn-primary:hover {
+  background-color: limegreen;
+  border-color: limegreen;
+}
+.subcontainer_2a {
+  margin-bottom: 0.5rem;
+}
+.icon_container button {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+}
+.icon_container button:first-child {
+  margin-right: 1rem;
+}
+.sub1,
+.sub2,
+.sub3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub1 div:nth-child(2),
+.sub2 div:nth-child(2),
+.sub3 div:nth-child(2) {
+  margin-right: 7rem;
+}
+.container_section1,
+.container_section2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.card1,
+.card2,
+.card3,
+.card4 {
+  border: 2px solid var(--border-color);
+  width: 18rem;
+  height: 15rem;
+  border-radius: 1rem;
+}
+.heading,
+._heading_ {
+  height: 3rem;
+  background: var(--border-color);
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.card_body {
+  padding-top: 1.2rem;
+}
+#viewOrder .modal-content {
+  width: 40rem;
+}
+._card_body_ {
+  padding: 0.5rem 0rem;
+}
+.proof1 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+.proof2 {
+  padding-top: 0.5rem;
+}
+#viewProof .modal-content {
+  width: 41rem;
+}
+.viewProof_btn button {
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viewProof_btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.revision{
+  border-bottom: 1.5px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+.revision_container2{
+  border-bottom: 1.5px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+#revision{
+  margin-top: 6rem;
+}
+#newAds{
+  margin-top: 9rem;
+}
